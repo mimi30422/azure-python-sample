@@ -5,5 +5,5 @@ while true; do
 done
 
 # flask translate compile
-exec gunicorn --workers 2 -b :5000 --access-logfile - --error-logfile - app:app
-# exec flask run --host 0.0.0.0 -p 5000
+#exec gunicorn --workers 2 -b :5000 --access-logfile - --error-logfile - app:app
+exec flask run --host 0.0.0.0 -p 5000
