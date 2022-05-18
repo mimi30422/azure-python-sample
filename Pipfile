@@ -16,6 +16,7 @@ freezegun = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
 requests = "*"
+pymysql = "*"
 
 [dev-packages]
 autopep8 = "*"

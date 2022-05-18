@@ -80,7 +80,7 @@ class Stock(database.Model):
     __tablename__ = 'stocks'
 
     id = database.Column(database.Integer, primary_key=True)
-    stock_symbol = database.Column(database.String, nullable=False)
+    stock_symbol = database.Column(database.String(255), nullable=False)
     number_of_shares = database.Column(database.Integer, nullable=False)
     purchase_price = database.Column(database.Integer, nullable=False)
     user_id = database.Column(database.Integer, database.ForeignKey('users.id'))
@@ -200,7 +200,7 @@ class User(database.Model):
     __tablename__ = 'users'
 
     id = database.Column(database.Integer, primary_key=True)
-    email = database.Column(database.String, unique=True)
+    email = database.Column(database.String(255), unique=True)
     password_hashed = database.Column(database.String(128))
     registered_on = database.Column(database.DateTime)
     email_confirmation_sent_on = database.Column(database.DateTime)
